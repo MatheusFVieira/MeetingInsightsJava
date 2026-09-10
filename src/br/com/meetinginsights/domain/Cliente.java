@@ -1,32 +1,39 @@
 package br.com.meetinginsights.domain;
 
-public class Cliente extends Pessoa {
-    private int idCliente;
-    private int idVendedor;
-    private String empresa;
+public class Cliente {
+    private Long idCliente;
+    private Long idVendedor;
+    private String razaoSocial;
     private String cnpj;
-    private String cargo;
     private String segmento;
+    private String email;
 
-    public Cliente(String nome, int idVendedor, String empresa, String cnpj, String cargo, String segmento) {
-        super(nome);
+    public Cliente() {}
+
+    public Cliente(Long idCliente, Long idVendedor, String razaoSocial, String cnpj, String segmento, String email) {
+        this.idCliente = idCliente;
         this.idVendedor = idVendedor;
-        this.empresa = empresa;
+        this.razaoSocial = razaoSocial;
         this.cnpj = cnpj;
-        this.cargo = cargo;
         this.segmento = segmento;
+        this.email = email;
     }
 
-    public int getIdCliente() { return idCliente; }
-    public void setIdCliente(int idCliente) { this.idCliente = idCliente; }
-    public int getIdVendedor() { return idVendedor; }
-    public String getEmpresa() { return empresa; }
+    public Long getIdCliente() { return idCliente; }
+    public void setIdCliente(Long idCliente) { this.idCliente = idCliente; }
+
+    public Long getIdVendedor() { return idVendedor; }
+    public void setIdVendedor(Long idVendedor) { this.idVendedor = idVendedor; }
+
+    public String getRazaoSocial() { return razaoSocial; }
+    public void setRazaoSocial(String razaoSocial) { this.razaoSocial = razaoSocial; }
+
     public String getCnpj() { return cnpj; }
-    public String getCargo() { return cargo; }
-    public String getSegmento() { return segmento; }
+    public void setCnpj(String cnpj) { this.cnpj = cnpj; }
 
-    @Override
-    public String exibirResumo() {
-        return "Cliente: " + nome + " | Empresa: " + empresa + " | CNPJ: " + cnpj;
-    }
+    public String getSegmento() { return segmento; }
+    public void setSegmento(String segmento) { this.segmento = segmento; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 }

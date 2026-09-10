@@ -1,31 +1,38 @@
 package br.com.meetinginsights.repository;
 
-import br.com.meetinginsights.domain.Transcricao;
+import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.StringReader;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
+@Repository
 public class TranscricaoRepository {
 
-    private List<Transcricao> transcricoes = new ArrayList<>();
-    private int proximoId = 1;
+    public Long salvar(String texto, Long idCliente) {
+        String sql = "INSERT INTO T_TRANSCRICAO (ID_CLIENTE, DATA_REUNIAO, TEXTO_BRUTO, STATUS_PROCESSAMENTO) " +
+                "VALUES (?, ?, ?, ?)";
 
-    public Transcricao salvar(Transcricao transcricao) {
-        transcricao.setId(proximoId);
-        proximoId++;
-        transcricoes.add(transcricao);
-        return transcricao;
-    }
+        try (Connection conn = ConexaoOracle.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql, new String[]{"ID_TRANSCRICAO"})) {
 
-    public List<Transcricao> listarTodas() {
-        return transcricoes;
-    }
+            stmt.setLong(1, idCliente);
+            stmt.setDate(2, new Date(System.currentTimeMillis()));
+            stmt.setCharacterStream(3, new StringReader(texto), texto.length());
+            stmt.setString(4, "CONCLUIDO");
 
-    public Transcricao buscarPorId(int id) {
-        for (Transcricao transcricao : transcricoes) {
-            if (transcricao.getId() == id) {
-                return transcricao;
+            stmt.executeUpdate();
+
+            try (ResultSet rs = stmt.getGeneratedKeys()) {
+                if (rs.next()) {
+                    return rs.getLong(1);
+                }
             }
+        } catch (SQLException e) {
+            System.err.println("Erro ao persistir transcrição no Oracle: " + e.getMessage());
         }
         return null;
     }
