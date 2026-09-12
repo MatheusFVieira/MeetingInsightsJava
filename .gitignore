@@ -28,3 +28,5 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+### arquivos sensiveis ###
+secrets.properties
