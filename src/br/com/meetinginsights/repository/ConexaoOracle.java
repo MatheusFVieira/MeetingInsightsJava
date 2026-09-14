@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public class ConexaoOracle {
     private static final String URL = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL";
-    private static final String USER = "******"; //Colocar usuário
-    private static final String PASS = ******; //Colocar senha
+    private static final String USER = "rm566198"; //Colocar usuário
+    private static final String PASS = "300906"; //Colocar senha
 
     public static Connection conectar() {
         try {

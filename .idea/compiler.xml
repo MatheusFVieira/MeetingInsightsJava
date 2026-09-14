@@ -9,14 +9,10 @@
         <module name="MeetingInsights" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="untitled" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="MeetingInsights" options="-parameters" />
-      <module name="untitled" options="-parameters" />
     </option>
   </component>
 </project>
