@@ -17,7 +17,7 @@ public class AgenteDecisaoService {
             Path tempFile = Files.createTempFile("transcricao_", ".txt");
             Files.writeString(tempFile, transcricao, StandardCharsets.UTF_8);
 
-            ProcessBuilder pb = new ProcessBuilder("python", "C:\\Users\\Vieira\\Downloads\\Challenge\\AgenteAI.py", tempFile.toAbsolutePath().toString());
+            ProcessBuilder pb = new ProcessBuilder("python", "src/br/com/meetinginsights/AgenteAI.py", tempFile.toAbsolutePath().toString());
 
             pb.redirectErrorStream(true);
 
@@ -32,7 +32,6 @@ public class AgenteDecisaoService {
                 if (line.trim().startsWith("{")) jsonStarted = true;
                 if (jsonStarted) output.append(line);
 
-                // Agora você verá exatamente onde o Python está quebrando
                 System.out.println("[Python] " + line);
             }
 

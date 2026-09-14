@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a38e88e3-3e50-4c11-b353-bc7e3fe0ad76" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MeetingInsights.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MeetingInsights.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/meetinginsights/service/AgenteDecisaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/meetinginsights/service/AgenteDecisaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/app/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/controller/AnaliseComercialController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/controller/AuthController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/controller/ClienteController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/controller/TarefaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/AcaoAgente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/AnaliseIA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/AnaliseResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/Cliente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/Pessoa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/Produto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/TarefaDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/Transcricao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/TranscricaoRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/Vendedor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/enums/NivelRisco.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/enums/Sentimento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/domain/enums/TipoOportunidade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/repository/AnaliseIaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/repository/ClienteRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/repository/ConexaoOracle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/repository/TarefaRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/repository/TranscricaoRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/repository/VendedorRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/service/AgenteDecisaoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/service/RegraNegocioService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/meetinginsights/test/RegraNegocioTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MatheusFVieira&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MatheusFVieira/MeetingInsightsJava.git&quot;,
+    &quot;accountId&quot;: &quot;8afa943f-c2ca-41ce-88fe-68c00c4b8282&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="3JKICMU60S2vRN3r573RUpED6w5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.Main.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Vieira/Downloads/Nova pasta (3)/JAVA/MeetingInsightsJava"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="MeetingInsightsJava" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a38e88e3-3e50-4c11-b353-bc7e3fe0ad76" name="Changes" comment="" />
+      <created>1789403209455</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1789403209455</updated>
+    </task>
+    <servers />
+  </component>
+</project>
