@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.SQLException;
 
 @Repository
 public class ClienteRepository {
@@ -72,7 +73,6 @@ public class ClienteRepository {
     }
 
     public boolean cadastrar(Cliente c) {
-        // ID_CLIENTE é gerado automaticamente pelo Oracle IDENTITY
         String sql = "INSERT INTO T_CLIENTE (ID_VENDEDOR, RAZAO_SOCIAL, CNPJ, SEGMENTO, DS_EMAIL) " +
                 "VALUES (?, ?, ?, ?, ?)";
 
@@ -89,6 +89,36 @@ public class ClienteRepository {
         } catch (Exception e) {
             System.err.println("Erro ao cadastrar cliente no Oracle: " + e.getMessage());
             e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean atualizar(Cliente c) {
+        String sql = "UPDATE T_CLIENTE SET RAZAO_SOCIAL = ?, SEGMENTO = ?, DS_EMAIL = ? WHERE ID_CLIENTE = ?";
+        try (Connection conn = ConexaoOracle.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, c.getRazaoSocial());
+            stmt.setString(2, c.getSegmento());
+            stmt.setString(3, c.getEmail());
+            stmt.setLong(4, c.getIdCliente());
+
+            return stmt.executeUpdate() > 0;
+        } catch (SQLException e) {
+            System.err.println("Erro no Update de Cliente: " + e.getMessage());
+            return false;
+        }
+    }
+
+    public boolean deletar(Long idCliente) {
+        String sql = "DELETE FROM T_CLIENTE WHERE ID_CLIENTE = ?";
+        try (Connection conn = ConexaoOracle.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setLong(1, idCliente);
+            return stmt.executeUpdate() > 0;
+        } catch (SQLException e) {
+            System.err.println("Erro no Delete de Cliente: " + e.getMessage());
             return false;
         }
     }

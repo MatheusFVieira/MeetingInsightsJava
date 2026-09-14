@@ -19,21 +19,18 @@ public class ClienteController {
         this.clienteRepository = clienteRepository;
     }
 
-    // Retorna apenas os clientes de um vendedor específico
     @GetMapping("/vendedor/{idVendedor}")
     public ResponseEntity<List<Cliente>> listarPorVendedor(@PathVariable Long idVendedor) {
         List<Cliente> lista = clienteRepository.listarPorVendedor(idVendedor);
         return ResponseEntity.ok(lista);
     }
 
-    // Retorna todos os clientes (usado para admins, se necessário)
     @GetMapping
     public ResponseEntity<List<Cliente>> listarTodos() {
         List<Cliente> lista = clienteRepository.listarTodos();
         return ResponseEntity.ok(lista);
     }
 
-    // Cadastra o cliente já vinculado ao vendedor enviado no corpo da requisição
     @PostMapping
     public ResponseEntity<?> cadastrar(@RequestBody Cliente cliente) {
         if (cliente.getRazaoSocial() == null || cliente.getRazaoSocial().trim().isEmpty()) {

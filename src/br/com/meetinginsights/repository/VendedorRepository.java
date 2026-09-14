@@ -63,7 +63,6 @@ public class VendedorRepository {
     }
 
     public boolean cadastrar(Vendedor v) {
-        // O ID_VENDEDOR é gerado automaticamente pelo Oracle IDENTITY
         String sql = "INSERT INTO T_VENDEDOR (NOME, EMAIL_CORPORATIVO, REGIAO_ATUACAO, DS_SENHA, FL_ADMIN) " +
                 "VALUES (?, ?, ?, ?, ?)";
 

@@ -9,7 +9,6 @@ public class TarefaDTO {
     private String statusAlerta;
     private String dataAcao;
 
-    // Campos detalhados da análise da IA
     private String ameacaChurn;
     private String oportunidadeUpsell;
     private String sentimentoGeral;

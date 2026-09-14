@@ -6,12 +6,11 @@ import java.sql.SQLException;
 
 public class ConexaoOracle {
     private static final String URL = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL";
-    private static final String USER = "rm566198"; //Colocar usuário
-    private static final String PASS = "300906"; //Colocar senha
+    private static final String USER = "rm566198";
+    private static final String PASS = "300906";
 
     public static Connection conectar() {
         try {
-            // Força a leitura do driver do Oracle na memória
             Class.forName("oracle.jdbc.OracleDriver");
             return DriverManager.getConnection(URL, USER, PASS);
 

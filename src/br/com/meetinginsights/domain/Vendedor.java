@@ -5,7 +5,7 @@ public class Vendedor {
     private String nomeVendedor;
     private String email;
     private String senha;
-    private String admin; // "S" ou "N"
+    private String admin;
 
     public Vendedor() {}
 

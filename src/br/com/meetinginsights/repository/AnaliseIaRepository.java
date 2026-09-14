@@ -28,7 +28,6 @@ public class AnaliseIaRepository {
 
             Long idAnaliseGerado = null;
 
-            // 1. Gravar em T_ANALISE_IA
             try (PreparedStatement stmtAnalise = conn.prepareStatement(sqlAnalise, new String[]{"ID_ANALISE"})) {
                 stmtAnalise.setLong(1, idTranscricao);
                 stmtAnalise.setString(2, analise.getRiscoChurn() != null ? analise.getRiscoChurn().name() : "BAIXO");
@@ -45,7 +44,6 @@ public class AnaliseIaRepository {
                 }
             }
 
-            // 2. Buscar ID do Produto correspondente no catálogo
             Long idProduto = null;
             if (analise.getProdutoRecomendado() != null) {
                 try (PreparedStatement stmtProd = conn.prepareStatement(sqlBuscaProduto)) {
@@ -58,12 +56,10 @@ public class AnaliseIaRepository {
                 }
             }
 
-            // Se não encontrar o produto específico, assume ID 1 como fallback
             if (idProduto == null) {
                 idProduto = 1L;
             }
 
-            // 3. Gravar em T_ACAO_AGENTE
             if (idAnaliseGerado != null) {
                 try (PreparedStatement stmtAcao = conn.prepareStatement(sqlAcao)) {
                     stmtAcao.setLong(1, idAnaliseGerado);

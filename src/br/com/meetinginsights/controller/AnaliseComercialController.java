@@ -31,13 +31,10 @@ public class AnaliseComercialController {
             return ResponseEntity.badRequest().build();
         }
 
-        // 1. Grava a transcrição e recupera o ID gerado
         Long idTranscricao = transcricaoRepository.salvar(request.getTexto(), request.getIdCliente());
 
-        // 2. Executa a IA (Qwen 2.5)
         AnaliseResponse resultado = agenteService.analisar(request.getTexto());
 
-        // 3. Persiste o resultado da IA e gera a ação do agente no Oracle
         if (resultado != null && idTranscricao != null) {
             analiseIaRepository.salvarAnaliseEAcao(resultado, idTranscricao);
         }
